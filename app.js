@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let progressbar = document.querySelector('.progressbar');
 
     // Random target position
+    const target = document.querySelector('.target');
     let targetTop = Math.floor(Math.random() * window.innerHeight);
     let targetLeft = Math.floor(Math.random() * window.innerWidth);
 
@@ -20,18 +21,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let secoundsTimer = setInterval(incrementSeconds, 1000);
 
-    /* Target Clicked
+    // Target Clicked
 
-    const target = document.querySelector('.target');
+    
     
     function targetHit(e){
         let posX = e.clientX;
         let posY = e.clientY;
     }
     
-
     target.addEventListener("click", targetHit);
-    */  
+    
 
     // Counter
     let counter = document.querySelector('.counter');

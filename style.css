@@ -2,33 +2,80 @@
 * {
   padding: 0;
   margin: 0;
-}
-
-html, body {
-  overflow: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-html .game, body .game {
+html, body {
+  overflow: hidden;
   background-color: #222;
+}
+
+html .game, body .game {
+  position: relative;
   height: 100vh;
   width: 100vw;
+}
+
+html .game .gameboard, body .game .gameboard {
+  width: 100vw;
+  height: 80vh;
+}
+
+html .game .gameboard .target, body .game .gameboard .target {
+  background-image: url("images/chicken1.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+  height: 62px;
+  width: 50px;
+  top: 40%;
+  left: 50%;
+  z-index: 10;
+}
+
+html .game .gameboard .start-message,
+html .game .gameboard .gameover-message, body .game .gameboard .start-message,
+body .game .gameboard .gameover-message {
+  color: #fff;
+  font-family: 'Balsamiq Sans', sans-serif;
+  margin: auto;
+  text-align: center;
   padding-top: 50px;
 }
 
-html .game .progressbar, body .game .progressbar {
+html .game .gameboard .start-message span,
+html .game .gameboard .gameover-message span, body .game .gameboard .start-message span,
+body .game .gameboard .gameover-message span {
+  color: #ffec3d;
+}
+
+html .game .nav, body .game .nav {
+  position: absolute;
+  bottom: 5vh;
+  background-color: rgba(105, 105, 105, 0.301);
+  padding: 20px;
+  margin: 0 5vw 0 5vw;
+  width: 90vw;
+  height: 20hv;
+  border: 1px solid #222;
+  border-radius: 3px;
+}
+
+html .game .nav .progressbar, body .game .nav .progressbar {
   background-color: #fff;
   width: 80vw;
   height: 10px;
   margin: auto;
+  border-radius: 5px;
 }
 
-html .game .progressbar span, body .game .progressbar span {
+html .game .nav .progressbar span, body .game .nav .progressbar span {
   background-color: #ffec3d;
+  border-radius: 5px;
 }
 
-html .game .stat, body .game .stat {
+html .game .nav .stat, body .game .nav .stat {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,40 +90,25 @@ html .game .stat, body .game .stat {
   font-size: 16px;
 }
 
-html .game .stat .timer, body .game .stat .timer {
+html .game .nav .stat .timer, body .game .nav .stat .timer {
   color: #fff;
 }
 
-html .game .stat .timer span, body .game .stat .timer span {
+html .game .nav .stat .timer span, body .game .nav .stat .timer span {
   font-size: 24px;
   color: #ffec3d;
 }
 
-html .game .stat .counter, body .game .stat .counter {
+html .game .nav .stat .counter, body .game .nav .stat .counter {
   color: #fff;
 }
 
-html .game .stat .counter span, body .game .stat .counter span {
+html .game .nav .stat .counter span, body .game .nav .stat .counter span {
   font-size: 24px;
   color: #ffec3d;
 }
 
-html .game .gameboard, body .game .gameboard {
-  background-color: dimgray;
-  width: 100vw;
-  height: 100%;
-}
-
-html .game .gameboard .target, body .game .gameboard .target {
-  background-image: url("images/chicken1.png");
-  background-repeat: no-repeat;
-  background-size: 30%;
-  position: relative;
-  height: 150px;
-  width: 150px;
-}
-
-html .game .info i, body .game .info i {
+html .game .nav .info i, body .game .nav .info i {
   color: #fff;
   position: absolute;
   bottom: 10px;
@@ -84,7 +116,7 @@ html .game .info i, body .game .info i {
   font-size: 24px;
 }
 
-html .game .info i:hover, body .game .info i:hover {
+html .game .nav .info i:hover, body .game .nav .info i:hover {
   color: #ffec3d;
 }
 /*# sourceMappingURL=style.css.map */
